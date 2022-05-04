@@ -146,7 +146,7 @@ def generate():
 
         # save image
         ext = 'png' if output.shape[3]==4 else 'jpg'
-        filename = osp.join(a.out_dir, "%06d.%s" % (i,ext))
+        filename = osp.join(a.out_dir, "%d.%s" % (a.seed,ext))
         imsave(filename, output[0])
         pbar.upd()
 
